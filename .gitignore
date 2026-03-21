@@ -1,0 +1,17 @@
+frontend/node_modules/
+
+venv/
+__pycache__/
+
+.env
+
+outputs/
+downloads/
+
+dist/
+
+*.log
+
+.vscode/
+.idea
+.DS_Store

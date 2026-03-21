@@ -1,0 +1,43 @@
+.form-container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    }
+    
+    /* URL input */
+    
+    .url-input{
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    }
+    
+    /* dropdowns */
+    
+    .operation-select,
+    .quality-select{
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    }
+    
+    /* button */
+    
+    .process-btn{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    border:none;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    }
+    
+    .process-btn:hover{
+    background:#1d4ed8;
+    }
