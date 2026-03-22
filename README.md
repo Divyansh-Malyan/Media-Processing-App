@@ -140,7 +140,7 @@ Media-Processing-App/
 
 ## Setup Instructions
 
-### 🔹 Backend
+### Backend
 
 ```bash
 cd backend
