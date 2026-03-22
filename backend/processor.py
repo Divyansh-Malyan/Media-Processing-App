@@ -36,14 +36,18 @@ def process_media(input_path, operation, quality, bitrate):
     
     print("Running command:", command)
 
-    result = subprocess.run(
-    command,
-    stdout=subprocess.PIPE,
-    stderr=subprocess.PIPE,
-    timeout=120
-    )
+    try:
+        result = subprocess.run(
+            command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=120
+        )
 
-    if result.returncode != 0:
-        raise Exception(result.stderr.decode())
+        if result.returncode != 0:
+            raise Exception(result.stderr.decode())
+
+    except subprocess.TimeoutExpired:
+        raise Exception("Processing timed out (file too large or slow)")
     
     return output_path

@@ -7,6 +7,7 @@ function App() {
   const [result, setResult] = useState(null);
   const [operation, setOperation] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const BASE_URL = "http://localhost:8000";
 
@@ -14,6 +15,7 @@ function App() {
     try {
       setLoading(true);
       setResult(null);
+      setError(null);
 
       const response = await fetch(`${BASE_URL}/process`, {
         method: "POST",
@@ -34,10 +36,10 @@ function App() {
 
         setResult(fileUrl);
       } else {
-        alert(res.message);
+        setError(res.message);
       }
     } catch (err) {
-      alert("API error");
+      setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -50,7 +52,8 @@ function App() {
       <div className="card">
         <Video_form onSubmit={processVideo} />
 
-        {loading && <p className="loading">Processing media...</p>}
+        {loading && <p className="loading">Processing media, please wait...</p>}
+        {error && <p className="error">{error}</p>}
       </div>
 
       {result && (
