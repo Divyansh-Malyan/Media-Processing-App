@@ -23,7 +23,7 @@ function Output({ result, operation }) {
     if (operation === "extract_audio") {
         return (
             <>
-                <audio controls width= "100%">
+                <audio controls style={{ width: "100%" }}>
                     <source src={result} type="audio/mpeg" />
                 </audio>
             </>
