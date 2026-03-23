@@ -105,7 +105,8 @@ The backend handles several real-world edge cases:
 * Unsupported file formats
 * FFmpeg processing errors
 * Timeout handling (to avoid long-running processes)
-* File size limit: **50 MB max** (Due to the computation and memory limits of Render's free-tier server. Larger files may cause processing timeouts or excessive resource usage.)
+- **File size limit:** 50 MB maximum.  
+  This limit is enforced due to the CPU and memory constraints of Render's free-tier infrastructure. Larger files may cause processing timeouts or excessive resource usage. For the most reliable compression performance, files **≤ 30 MB** are recommended.
 
 ---
 
