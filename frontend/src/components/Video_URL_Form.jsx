@@ -79,7 +79,7 @@ function Video_URL_Form({ onSubmit }) {
       <button
         className="process-btn"
         onClick={handleSubmit}
-        disabled={!url}
+        disabled={!url || loading}
       >
         {url ? "Process Media" : "Enter URL first"}
       </button>

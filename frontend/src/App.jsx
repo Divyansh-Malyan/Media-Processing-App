@@ -50,7 +50,7 @@ function App() {
       <h1 className="title">Media Processing Tool</h1>
 
       <div className="card">
-        <Video_form onSubmit={processVideo} />
+        <Video_form onSubmit={processVideo} loading = {loading} />
 
         {loading && <p className="loading">Processing media, please wait...</p>}
         {error && <p className="error">{error}</p>}
