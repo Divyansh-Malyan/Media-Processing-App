@@ -1,5 +1,13 @@
 # Media Processing App
 
+## Live Demo
+https://media-processing-app-frontend.vercel.app/
+
+## Backend API
+https://media-processing-app-backend.onrender.com/
+
+---
+
 This is a full-stack media processing application that allows users to process videos directly from a URL. The app can generate thumbnails, compress videos, and extract audio using FFmpeg.
 
 The goal of this project was to build a simple but robust system that handles real-world scenarios like large files, invalid inputs, and processing failures.
