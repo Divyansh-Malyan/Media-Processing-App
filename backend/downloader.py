@@ -8,7 +8,7 @@ def download_media(url):
     os.makedirs("downloads", exist_ok=True)
     filename = f"downloads/{uuid.uuid4()}.mp4"
 
-    response = requests.get(url, stream=True, timeout=10)
+    response = requests.get(url, stream=True, timeout=30)
     response.raise_for_status()
 
     content_type = response.headers.get("content-type", "")

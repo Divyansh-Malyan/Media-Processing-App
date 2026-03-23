@@ -4,6 +4,8 @@ import uuid
 
 
 def process_media(input_path, operation, quality, bitrate):
+    if not os.path.exists(input_path):
+        raise Exception("Downloaded file missing before processing")
     output_name = str(uuid.uuid4())
     os.makedirs("outputs", exist_ok=True)
 
@@ -13,10 +15,10 @@ def process_media(input_path, operation, quality, bitrate):
         command = [
             "ffmpeg",
             "-y",
-            "-ss",
-            "00:00:02",
             "-i",
             input_path,
+            "-ss",
+            "00:00:02",
             "-vframes",
             "1",
             output_path,

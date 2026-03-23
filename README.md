@@ -167,7 +167,9 @@ npm run dev
 You can test using a public video URL like:
 
 ```
-https://filesamples.com/samples/video/mp4/sample_640x360.mp4
+https://samplelib.com/lib/preview/mp4/sample-30s.mp4
+https://download.samplelib.com/mp4/sample-10s.mp4
+https://download.samplelib.com/mp4/sample-20s.mp4
 ```
 
 ---

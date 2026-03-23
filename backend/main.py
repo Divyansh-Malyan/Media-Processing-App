@@ -76,7 +76,6 @@ def process(request: MediaRequest):
 
     try:
         clean_old_outputs()
-        clean_downloads()
 
         input_path = download_media(request.url)
 
