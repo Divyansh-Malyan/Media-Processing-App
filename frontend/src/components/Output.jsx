@@ -5,7 +5,7 @@ function Output({ result, operation }) {
     if (operation === "thumbnail") {
         return (
             <>
-                <img src={result} width="400" />
+                <img src={result} width="100%"/>
             </>
         );
     }
@@ -13,7 +13,7 @@ function Output({ result, operation }) {
     if (operation === "compress") {
         return (
             <>
-                <video controls width="400">
+                <video controls width="100%">
                     <source src={result} type="video/mp4" />
                 </video>
             </>

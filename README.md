@@ -105,7 +105,7 @@ The backend handles several real-world edge cases:
 * Unsupported file formats
 * FFmpeg processing errors
 * Timeout handling (to avoid long-running processes)
-* File size limit (30MB max)
+* File size limit: **50 MB max** (Due to the computation and memory limits of Render's free-tier server. Larger files may cause processing timeouts or excessive resource usage.)
 
 ---
 
@@ -164,7 +164,7 @@ npm run dev
 
 ## Sample Test URL
 
-You can test using a public video URL like:
+You can test using a public video URLs like:
 
 ```
 https://samplelib.com/lib/preview/mp4/sample-30s.mp4
@@ -185,7 +185,7 @@ https://download.samplelib.com/mp4/sample-20s.mp4
 ## Assumptions
 
 * Only video URLs are supported
-* Files larger than 30MB are rejected
+* Files larger than 50MB are rejected
 * Output files are stored temporarily (no persistent storage)
 
 ---
