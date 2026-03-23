@@ -78,7 +78,7 @@ def process_media(input_path, operation, quality, bitrate):
 
     try:
         result = subprocess.run(
-            command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=160
+            command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=240
         )
 
         if result.returncode != 0:
