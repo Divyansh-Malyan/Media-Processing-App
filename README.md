@@ -105,7 +105,7 @@ The backend handles several real-world edge cases:
 * Unsupported file formats
 * FFmpeg processing errors
 * Timeout handling (to avoid long-running processes)
-* File size limit (100MB max)
+* File size limit (30MB max)
 
 ---
 
@@ -183,7 +183,7 @@ https://filesamples.com/samples/video/mp4/sample_640x360.mp4
 ## Assumptions
 
 * Only video URLs are supported
-* Files larger than 100MB are rejected
+* Files larger than 30MB are rejected
 * Output files are stored temporarily (no persistent storage)
 
 ---

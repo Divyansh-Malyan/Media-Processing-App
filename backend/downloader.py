@@ -1,7 +1,7 @@
 import requests
 import os
 import uuid
-MAX_FILE_SIZE = 100 * 1024 * 1024
+MAX_FILE_SIZE = 30 * 1024 * 1024
 
 def download_media(url):
 
@@ -27,7 +27,7 @@ def download_media(url):
             if total_size > MAX_FILE_SIZE:
                 file.close()
                 os.remove(filename)
-                raise Exception("File too large (max 100MB allowed)")
+                raise Exception("File too large (max 30MB allowed)")
 
             file.write(chunk)
         
