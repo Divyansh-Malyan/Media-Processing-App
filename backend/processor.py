@@ -27,9 +27,9 @@ def process_media(input_path, operation, quality, bitrate):
     elif operation == "compress":
         output_path = f"outputs/{output_name}.mp4"
 
-        crf_map = {"low": "32", "medium": "28", "high": "23"}
+        crf_map = {"low": "40", "medium": "35", "high": "30"}
 
-        crf = crf_map.get(quality, "28")
+        crf = crf_map.get(quality, "35")
 
         command = [
             "ffmpeg",
